@@ -1,0 +1,9 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: energydashboard
+      POSTGRES_USER: energydashboard
+      POSTGRES_PASSWORD: energydashboard
+    ports:
+      - "5432:5432"
