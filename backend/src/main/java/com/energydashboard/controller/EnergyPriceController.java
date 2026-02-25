@@ -1,6 +1,5 @@
 package com.energydashboard.controller;
 
-import com.energydashboard.model.EnergyPrice;
 import com.energydashboard.repository.EnergyPriceRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

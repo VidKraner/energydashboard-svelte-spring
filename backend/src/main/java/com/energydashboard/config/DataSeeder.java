@@ -35,7 +35,7 @@ public class DataSeeder implements CommandLineRunner {
     public void run(String... args) {
         if (userRepository.count() > 0) return; // don't seed twice
 
-        // Create demo user
+        // Create demo userH
         User demo = new User("demo@energypulse.com", passwordEncoder.encode("demo123"), "Demo User");
         userRepository.save(demo);
 
