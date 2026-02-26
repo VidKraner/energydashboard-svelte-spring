@@ -7,3 +7,21 @@ services:
       POSTGRES_PASSWORD: energydashboard
     ports:
       - "5432:5432"
+
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/energydashboard
+      SPRING_DATASOURCE_USERNAME: energydashboard
+      SPRING_DATASOURCE_PASSWORD: energydashboard
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
